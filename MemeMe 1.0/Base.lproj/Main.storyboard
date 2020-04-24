@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxJ-Su-hUb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Meme Me 1.0" id="xIG-Kw-PHf">
+                                        <barButtonItem key="leftBarButtonItem" image="square.and.arrow.up" catalog="system" id="GN1-kd-YIV">
+                                            <connections>
+                                                <action selector="shareImage:" destination="BYZ-38-t0r" id="etN-mZ-Y3H"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="0Rh-Hc-tJw">
+                                            <connections>
+                                                <action selector="cancelClicked:" destination="BYZ-38-t0r" id="uoP-eB-LC6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kfk-ei-Lfl">
+                                <rect key="frame" x="0.0" y="94" width="414" height="42.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Etl-Gf-SaT">
+                                <rect key="frame" x="0.0" y="94" width="414" height="718"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-mg-NNK">
+                                <rect key="frame" x="0.0" y="765.5" width="414" height="42.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEr-g2-DnW">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gzm-ov-W26"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hHa-Af-zXq"/>
+                                    <barButtonItem title="camera" image="camera" catalog="system" id="Poi-AW-s8B">
+                                        <connections>
+                                            <action selector="takeAnImage:" destination="BYZ-38-t0r" id="cIB-rA-Hpv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eYC-5Q-gEE"/>
+                                    <barButtonItem tag="1" title="album" image="photo.on.rectangle" catalog="system" id="VcZ-jJ-HHX">
+                                        <connections>
+                                            <action selector="takeAnImage:" destination="BYZ-38-t0r" id="YkR-RW-c9d"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BBL-LA-nK8"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Etl-Gf-SaT" secondAttribute="trailing" id="1Iz-l8-g9n"/>
+                            <constraint firstItem="PEr-g2-DnW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7kk-Wj-t5W"/>
+                            <constraint firstItem="kfk-ei-Lfl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8SI-AT-lVt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cJI-mg-NNK" secondAttribute="trailing" id="E5t-yV-HlM"/>
+                            <constraint firstItem="PEr-g2-DnW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FRI-DG-bPS"/>
+                            <constraint firstItem="kfk-ei-Lfl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="JGz-oY-BFZ"/>
+                            <constraint firstItem="PEr-g2-DnW" firstAttribute="leading" secondItem="JxJ-Su-hUb" secondAttribute="leading" id="OOY-bV-LpT"/>
+                            <constraint firstItem="cJI-mg-NNK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P87-0U-Fxg"/>
+                            <constraint firstItem="Etl-Gf-SaT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PaL-xb-TaI"/>
+                            <constraint firstItem="JxJ-Su-hUb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dQp-s7-OOq"/>
+                            <constraint firstItem="Etl-Gf-SaT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="dwR-XJ-71D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Etl-Gf-SaT" secondAttribute="bottom" constant="50" id="jqC-1S-7FT"/>
+                            <constraint firstItem="PEr-g2-DnW" firstAttribute="trailing" secondItem="JxJ-Su-hUb" secondAttribute="trailing" id="r1i-F0-79p"/>
+                            <constraint firstItem="PEr-g2-DnW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tYL-Nq-Nmi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kfk-ei-Lfl" secondAttribute="trailing" id="upk-nM-eEK"/>
+                            <constraint firstItem="PEr-g2-DnW" firstAttribute="top" secondItem="cJI-mg-NNK" secondAttribute="bottom" constant="10" id="zI6-vw-Ydk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="cJI-mg-NNK" id="lUo-tQ-fKs"/>
+                        <outlet property="cameraButton" destination="Poi-AW-s8B" id="zra-9j-7wQ"/>
+                        <outlet property="cancelButton" destination="0Rh-Hc-tJw" id="iba-ld-3j5"/>
+                        <outlet property="navigationBar" destination="JxJ-Su-hUb" id="ert-2H-cHg"/>
+                        <outlet property="pickedImageView" destination="Etl-Gf-SaT" id="yMo-ia-AtQ"/>
+                        <outlet property="shareButton" destination="GN1-kd-YIV" id="kzi-8c-rIY"/>
+                        <outlet property="toolBar" destination="PEr-g2-DnW" id="Bki-Bt-oCA"/>
+                        <outlet property="topTextField" destination="kfk-ei-Lfl" id="fAO-mM-19x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="98"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
